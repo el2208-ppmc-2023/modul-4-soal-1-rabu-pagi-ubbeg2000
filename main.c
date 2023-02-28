@@ -74,7 +74,7 @@ void searchName(Pokemon *p[], int n, char name[]) {
    }
 
    if (!found) {
-      printf("\nPokemon dengan inisial nama %s belum ditangkap!", name);
+      printf("\nPokemon dengan nama %s belum ditangkap!", name);
    }
 }
 
