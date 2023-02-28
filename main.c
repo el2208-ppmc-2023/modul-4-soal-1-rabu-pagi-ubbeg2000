@@ -22,7 +22,7 @@ typedef struct Pokemon {
 char *strlwr(char *s) {
    for (int i = 0; i < strlen(s); i++)
    {
-      s[i] = s[i] - 32;
+      s[i] = (char)tolower((char)s[i]);
    }
    return s;
 }
