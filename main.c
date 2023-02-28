@@ -19,6 +19,14 @@ typedef struct Pokemon {
    char type[MAX_LEN];
 }Pokemon;
 
+char *strlwr(char *s) {
+   for (int i = 0; i < strlen(s); i++)
+   {
+      s[i] = s[i] - 32;
+   }
+   return s;
+}
+
 //Fungsi untuk melakukan print sesuai input structure
 void printPokemon(Pokemon *p) {
    p->name[0] = toupper(p->name[0]); //uppercase letter pertama
@@ -94,7 +102,7 @@ int main() {
    
    char filename[MAX_LEN];
    printf("Masukkan nama file input: ");
-   scanf("%s", &filename);
+   scanf("%s", filename);
    FILE* fp = fopen(filename, "r");
    if (fp == NULL){
       printf("\nError: file tidak tersedia!\n");
@@ -142,12 +150,12 @@ int main() {
    }
    else if (input == 2){
       printf("\nProgram mencari Nama pokemon\nMasukkan Nama pokemon yang ingin dicari: ");
-      scanf("%s", &name);
+      scanf("%s", name);
       searchName(pokedex, len, strlwr(name));
    }
    else if (input == 3){
       printf("\nProgram mencari Type pokemon\nMasukkan Type pokemon yang ingin dicari: ");
-      scanf("%s", &type);
+      scanf("%s", type);
       searchType(pokedex, len, strlwr(type));
    }
 
