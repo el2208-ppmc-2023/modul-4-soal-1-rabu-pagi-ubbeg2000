@@ -65,7 +65,7 @@
       "setup": "",
       "run": "./main",
       "input": "pokedex2.txt\r\nrock",
-      "output": "Program mencari Type pokemon\r\nMasukkan Type pokemon yang ingin dicari: rock\r\n\r\nPokemon dengan type rock belum ditangkap!",
+      "output": "Pokemon dengan type rock belum ditangkap!",
       "comparison": "included",
       "timeout": 1,
       "points": 10
